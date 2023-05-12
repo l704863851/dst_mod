@@ -4,7 +4,7 @@ AddComponentPostInit("edible", function(self)
         local healthvalue = self.gethealthfn ~= nil and self.gethealthfn(self.inst, eater) or self.healthvalue
         local spice_source = self.spice
 
-        if healthvalue > 0 then
+        if healthvalue > 0 or multiplier == 0 then
             return 0
         end
     
